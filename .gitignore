@@ -4,5 +4,3 @@ pycache/*
 *.pyc
 /pycache/init.cpython-311.pyc
 /pycache/settings.cpython-311.pyc
-
-aa
