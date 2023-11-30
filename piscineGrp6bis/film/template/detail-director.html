@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+{% if director %}
+    <h1>{{director.name|capfirst}}</h1>
+    <ul>
+        <li>{{director.surname}}</li>
+        <li>Résumé: {{director.resume|striptags}}</li>
+    </ul>
+{% else %}
+    <p>Pas de directeur avec l'id</p>
+{% endif %}
+
+    <form action="" method="post">
+        <input type="text" name="nom" id="nom" autocomplete="nom">
+        <input type="text" name="prenom" id="prenom" autocomplete="prenom">
+    </form>
+{% endblock %}

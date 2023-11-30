@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+{% if movie %}
+    <h1>{{movie.title|capfirst}}</h1>
+    <ul>
+        <li>{{movie.director}}</li>
+        <li>Synopsis: {{movie.summary|striptags}}</li>
+        <li>{{movie.duration}}</li>
+        <li>{{movie.date}}</li>
+    </ul>
+{% else %}
+    <p>Pas de film avec l'id</p>
+{% endif %}
+
+    <form action="" method="post">
+        <input type="text" name="nom" id="nom" autocomplete="nom">
+        <input type="text" name="prenom" id="prenom" autocomplete="prenom">
+    </form>
+{% endblock %}
