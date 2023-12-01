@@ -3,11 +3,11 @@ from django.db import models
 class Movie(models.Model):
     title = models.CharField(max_length=90)
     director = models.CharField(max_length=90)
-    director = models.ForeignKey('Realisator', on_delete=models.CASCADE, null=True, blank=True)
-    director_bis = models.ManyToManyField('', related_name='posts', blank=True)
+    director = models.ForeignKey('Director', on_delete=models.CASCADE, null=True, blank=True)
+    director_bis = models.ManyToManyField('Director', related_name='posts', blank=True)
     summary = models.TextField(null=True)
     duration = models.DurationField
-    date = models.DateField(null=False)
+    date = models.IntegerField(null=False)
 
     def _str_(self):
         return self.title

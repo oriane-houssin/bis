@@ -5,7 +5,7 @@ class MovieForm(forms.Form):
     title = forms.CharField(max_length=90, error_messages={'required': 'Le titre est obligatoire.'})
     director = forms.CharField(max_length=90, error_messages={'required': 'Le directeur est obligatoire.'})
     summary = forms.Textarea()
-    duration = forms.DateField()
+    duration = forms.IntegerField()
     date = forms.DateField()
 
 class DirectorForm(forms.Form):
