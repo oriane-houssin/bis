@@ -6,7 +6,7 @@ class Movie(models.Model):
     director = models.ForeignKey('Director', on_delete=models.CASCADE, null=True, blank=True)
     director_bis = models.ManyToManyField('Director', related_name='posts', blank=True)
     summary = models.TextField(null=True)
-    duration = models.DurationField
+    duration = models.DurationField(null=False)
     date = models.IntegerField(null=False)
 
     def _str_(self):
